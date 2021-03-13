@@ -154,7 +154,7 @@ export default class ListControl extends React.Component {
   handleChange = e => {
     const { onChange } = this.props;
     const oldValue = this.state.value;
-    const newValue = e.target.value.trim();
+    const newValue = e.target.value;
     const listValue = newValue ? newValue.split(',') : [];
     if (newValue.match(/,$/) && oldValue.match(/, $/)) {
       listValue.pop();
